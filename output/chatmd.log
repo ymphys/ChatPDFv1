@@ -1,0 +1,8 @@
+2025-11-04 22:04:39,251 - INFO - Starting Chatmd main process
+2025-11-04 22:05:02,021 - DEBUG - POST https://api.openai.com/v1/chat/completions success (200)
+2025-11-04 22:05:02,022 - INFO - API用量: prompt_tokens=17052, completion_tokens=569, total_tokens=17621, 估算价格=$0.1876
+2025-11-04 22:05:02,022 - INFO - Chunk 1/1 answered for question: 请用以下模板概括该文档，并将其中的占位符填入具体信息；若文中未提及某项，请写‘未说明’；若涉及到专业词汇，请在结尾处统一进行解释：[xxxx年]，[xx大学/研究机构]的[xx作者等]针对[研究问题]，采用[研究手段/方法]，对[研究对象或范围]进行了研究，并发现/得出[主要结论]。
+2025-11-04 22:05:02,022 - DEBUG - Chunk 1 preview: 在1997年，哈佛大学的Juan Maldacena针对超共形场理论（CFT）和超引力（supergravity）之间的关系，采用理论分析的方法，对在大N极限下的某些特定维度的共形场理论进行了研究，并发现这些理论在它们的希尔伯特空间中包含描
+2025-11-04 22:05:03,027 - DEBUG - Single chunk for question '请用以下模板概括该文档，并将其中的占位符填入具体信息；若文中未提及某项，请写‘未说明’；若涉及到专业词汇，请在结尾处统一进行解释：[xxxx年]，[xx大学/研究机构]的[xx作者等]针对[研究问题]，采用[研究手段/方法]，对[研究对象或范围]进行了研究，并发现/得出[主要结论]。', skipping synthesis call.
+2025-11-04 22:05:03,028 - INFO - Interpretation answers appended to ./output/interpretation_results.md
+2025-11-04 22:05:03,031 - INFO - Chatmd main process finished
