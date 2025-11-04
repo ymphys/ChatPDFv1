@@ -1,10 +1,17 @@
+import argparse
+import json
+import logging
+import os
+import re
+import time
+import zipfile
+from datetime import datetime
+from pathlib import Path
+from tempfile import TemporaryDirectory
+from urllib.parse import unquote, urlparse
+
 import requests
 from dotenv import load_dotenv
-import os
-import json
-from datetime import datetime
-import time
-import logging
 
 # Logging: brief info to console, detailed debug to file
 LOG_FILE = "./output/chatmd.log"
@@ -161,7 +168,8 @@ def chatgpt_interpretation(md_content, questions, openai_api_key):
                     text = resp.json()['choices'][0]['message']['content'].strip()
                     partial_answers.append(text)
                     logger.info(f"Chunk {i}/{len(chunks)} answered for question: {question}")
-                    logger.debug(f"Chunk {i} preview: {text[:120].replace('\n', ' ')}")
+                    preview = text[:120].replace("\n", " ")
+                    logger.debug(f"Chunk {i} preview: {preview}")
                 else:
                     logger.error(f"Error with OpenAI API for chunk {i}: {resp.status_code}")
                     partial_answers.append(f"[片段调用失败：{resp.status_code}]")
@@ -216,11 +224,190 @@ def chatgpt_interpretation(md_content, questions, openai_api_key):
 
     return new_sections
 
+def _mineru_headers(api_key: str) -> dict:
+    return {
+        "Authorization": f"Bearer {api_key}",
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+    }
+
+
+def _request_with_retries(method, url, *, max_retries=3, base_delay=2, **kwargs):
+    for attempt in range(1, max_retries + 1):
+        try:
+            resp = requests.request(method, url, timeout=30, **kwargs)
+            if resp.status_code == 200:
+                return resp
+            logger.warning(
+                "MinerU API %s %s returned status %s (attempt %s/%s)",
+                method,
+                url,
+                resp.status_code,
+                attempt,
+                max_retries,
+            )
+        except requests.RequestException as exc:
+            logger.warning(
+                "MinerU API %s %s request error on attempt %s/%s: %s",
+                method,
+                url,
+                attempt,
+                max_retries,
+                exc,
+            )
+        if attempt < max_retries:
+            time.sleep(base_delay * (2 ** (attempt - 1)))
+    raise RuntimeError(f"MinerU API request failed after {max_retries} attempts: {url}")
+
+
+def _sanitize_basename(name: str) -> str:
+    stem = re.sub(r"[^\w.\-]+", "_", name).strip("._")
+    return stem or "document"
+
+
+def _download_file(url: str, destination: Path) -> None:
+    logger.info("Downloading file from %s to %s", url, destination)
+    with requests.get(url, stream=True, timeout=120) as resp:
+        resp.raise_for_status()
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        with destination.open("wb") as fh:
+            for chunk in resp.iter_content(chunk_size=8192):
+                if chunk:
+                    fh.write(chunk)
+
+
+def _extract_markdown_from_zip(zip_path: Path, target_dir: Path) -> Path:
+    with zipfile.ZipFile(zip_path) as zf:
+        zf.extractall(target_dir)
+    markdown_files = sorted(target_dir.rglob("*.md"))
+    if not markdown_files:
+        raise FileNotFoundError("No markdown file found in MinerU result package")
+    # Prefer the largest markdown file assuming it contains the main content
+    markdown_files.sort(key=lambda p: p.stat().st_size, reverse=True)
+    selected = markdown_files[0]
+    logger.info("Selected markdown file %s from MinerU results", selected)
+    return selected
+
+
+def process_pdf_via_mineru(
+    pdf_url: str,
+    output_root: Path,
+    api_key: str,
+    poll_interval: int = 5,
+    timeout_seconds: int = 600,
+) -> Path:
+    base_url = "https://mineru.net/api/v4"
+    headers = _mineru_headers(api_key)
+    parsed_url = urlparse(pdf_url)
+    original_name = Path(unquote(parsed_url.path)).name or "document.pdf"
+    stem = _sanitize_basename(Path(original_name).stem)
+    timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
+    task_label = f"{stem}_{timestamp}"
+    target_dir = output_root / task_label
+    target_dir.mkdir(parents=True, exist_ok=True)
+
+    payload = {
+        "url": pdf_url,
+        "is_ocr": False,
+        "enable_formula": True,
+        "enable_table": True,
+    }
+    logger.info("Submitting MinerU extraction task for %s", pdf_url)
+    resp = _request_with_retries(
+        "POST", f"{base_url}/extract/task", json=payload, headers=headers
+    )
+    data = resp.json()
+    if data.get("code") != 0:
+        raise RuntimeError(f"MinerU task submission failed: {data}")
+    task_id = data["data"]["task_id"]
+    logger.info("MinerU task created: %s", task_id)
+
+    deadline = time.time() + timeout_seconds
+    task_info = None
+    while time.time() < deadline:
+        resp = _request_with_retries(
+            "GET", f"{base_url}/extract/task/{task_id}", headers=headers
+        )
+        task_data = resp.json()
+        if task_data.get("code") != 0:
+            raise RuntimeError(f"MinerU task query failed: {task_data}")
+        task_info = task_data["data"]
+        state = task_info.get("state")
+        logger.info("MinerU task %s state: %s", task_id, state)
+        if state == "done":
+            break
+        if state == "failed":
+            raise RuntimeError(
+                f"MinerU task {task_id} failed: {task_info.get('err_msg', 'unknown reason')}"
+            )
+        time.sleep(poll_interval)
+    else:
+        raise TimeoutError(f"Timed out waiting for MinerU task {task_id} to finish")
+
+    zip_url = task_info.get("full_zip_url")
+    if not zip_url:
+        raise RuntimeError("MinerU task completed but no result package URL provided")
+
+    with TemporaryDirectory() as tmpdir:
+        zip_path = Path(tmpdir) / "result.zip"
+        _download_file(zip_url, zip_path)
+        markdown_path = _extract_markdown_from_zip(zip_path, target_dir)
+
+    pdf_destination = target_dir / f"{task_label}.pdf"
+    try:
+        _download_file(pdf_url, pdf_destination)
+    except Exception as exc:
+        logger.warning("Failed to download original PDF %s: %s", pdf_url, exc)
+
+    logger.info(
+        "MinerU processing complete. Markdown: %s, PDF: %s",
+        markdown_path,
+        pdf_destination,
+    )
+    return markdown_path
+
+
+def parse_args():
+    parser = argparse.ArgumentParser(description="Process markdown or remote PDF files.")
+    parser.add_argument(
+        "--pdf-url",
+        help="URL of the PDF to process with MinerU before analysis.",
+    )
+    parser.add_argument(
+        "--md-path",
+        help="Path to an existing markdown file to process directly.",
+    )
+    parser.add_argument(
+        "--mineru-timeout",
+        type=int,
+        default=600,
+        help="Maximum seconds to wait for MinerU extraction to finish.",
+    )
+    return parser.parse_args()
+
+
 def main():
     logger.info("Starting Chatmd main process")
+    args = parse_args()
     OPENAI_API_KEY = load()
-    md_file_path = "./mds/9711200v3_MinerU__20251101031155.md"
-    md_content = read_md_content(md_file_path)
+
+    if args.pdf_url:
+        mineru_api_key = os.getenv("MINERU_API_KEY")
+        if not mineru_api_key:
+            raise ValueError("MINERU_API_KEY environment variable is not set")
+        output_root = Path("./mds")
+        md_path = process_pdf_via_mineru(
+            args.pdf_url,
+            output_root=output_root,
+            api_key=mineru_api_key,
+            timeout_seconds=args.mineru_timeout,
+        )
+    elif args.md_path:
+        md_path = Path(args.md_path)
+    else:
+        md_path = Path("./mds/9711200v3_MinerU__20251101031155.md")
+
+    md_content = read_md_content(str(md_path))
 
     questions = [
         "请用以下模板概括该文档，并将其中的占位符填入具体信息；若文中未提及某项，请写‘未说明’；若涉及到专业词汇，请在结尾处统一进行解释：[xxxx年]，[xx大学/研究机构]的[xx作者等]针对[研究问题]，采用[研究手段/方法]，对[研究对象或范围]进行了研究，并发现/得出[主要结论]。"
@@ -229,5 +416,6 @@ def main():
     chatgpt_interpretation(md_content, questions, OPENAI_API_KEY)
     logger.info("Chatmd main process finished")
 
+
 if __name__ == "__main__":
-    main()    
+    main()
