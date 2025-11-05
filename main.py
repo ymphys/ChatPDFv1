@@ -14,7 +14,8 @@ import requests
 from dotenv import load_dotenv
 
 # Logging: brief info to console, detailed debug to file
-LOG_FILE = "./output/chatmd.log"
+BASE_DIR = Path(__file__).resolve().parent
+LOG_FILE = BASE_DIR / "chatmd.log"
 logger = logging.getLogger("chatmd")
 logger.setLevel(logging.DEBUG)
 if not logger.handlers:
@@ -95,16 +96,16 @@ def _post_with_retries(url, headers, json_data, max_retries=4, base_delay=1):
                 continue
             raise
 
-def load_existing_answers(path="./output/interpretation_results.md"):
+def load_existing_answers(path: Path):
     """
     读取已有的 interpretation_results.md，提取已经存在的问答问题（以避免重复处理）
     返回一个 set，包含已回答的问题文本（尽量保持与问题源文本一致的匹配）
     """
     existing = set()
-    if not os.path.exists(path):
+    if not path.exists():
         return existing
     try:
-        with open(path, 'r', encoding='utf-8') as f:
+        with path.open('r', encoding='utf-8') as f:
             content = f.read()
         for line in content.splitlines():
             line = line.strip()
@@ -121,7 +122,7 @@ def load_existing_answers(path="./output/interpretation_results.md"):
         logger.error(f"Failed to read existing answers from {path}: {e}")
     return existing
 
-def chatgpt_interpretation(md_content, questions, openai_api_key):
+def chatgpt_interpretation(md_content, questions, openai_api_key, output_path: Path):
     """
     使用ChatGPT对md内容进行解读
     questions: 固定问题列表
@@ -138,7 +139,7 @@ def chatgpt_interpretation(md_content, questions, openai_api_key):
     }
     
     # 读取已存在的答案，避免重复处理同一问题
-    existing = load_existing_answers()
+    existing = load_existing_answers(output_path)
 
     # 收集新生成的部分，最后统一写入/追加到 interpretation_results.md
     new_sections = ""
@@ -206,15 +207,15 @@ def chatgpt_interpretation(md_content, questions, openai_api_key):
             logger.exception(f"Error processing question '{question}': {e}")
             new_sections += f"## {question}\n\n处理此问题时发生错误。\n\n"
     # 将新生成部分追加到文件（若无则创建）
-    output_path = "./output/interpretation_results.md"
     try:
         if new_sections:
-            if not os.path.exists(output_path):
-                with open(output_path, 'w', encoding='utf-8') as f:
+            output_path.parent.mkdir(parents=True, exist_ok=True)
+            if not output_path.exists():
+                with output_path.open('w', encoding='utf-8') as f:
                     f.write("# 文档解读\n\n")
                     f.write(new_sections)
             else:
-                with open(output_path, 'a', encoding='utf-8') as f:
+                with output_path.open('a', encoding='utf-8') as f:
                     f.write(new_sections)
             logger.info(f"Interpretation answers appended to {output_path}")
         else:
@@ -390,30 +391,31 @@ def main():
     logger.info("Starting Chatmd main process")
     args = parse_args()
     OPENAI_API_KEY = load()
+    files_root = BASE_DIR / "files"
 
     if args.pdf_url:
         mineru_api_key = os.getenv("MINERU_API_KEY")
         if not mineru_api_key:
             raise ValueError("MINERU_API_KEY environment variable is not set")
-        output_root = Path("./mds")
         md_path = process_pdf_via_mineru(
             args.pdf_url,
-            output_root=output_root,
+            output_root=files_root,
             api_key=mineru_api_key,
             timeout_seconds=args.mineru_timeout,
         )
     elif args.md_path:
         md_path = Path(args.md_path)
     else:
-        md_path = Path("./mds/9711200v3_MinerU__20251101031155.md")
+        md_path = files_root / "9711200v3_MinerU__20251101031155.md"
 
     md_content = read_md_content(str(md_path))
+    interpretation_output = md_path.parent / "interpretation_results.md"
 
     questions = [
         "请用以下模板概括该文档，并将其中的占位符填入具体信息；若文中未提及某项，请写‘未说明’；若涉及到专业词汇，请在结尾处统一进行解释：[xxxx年]，[xx大学/研究机构]的[xx作者等]针对[研究问题]，采用[研究手段/方法]，对[研究对象或范围]进行了研究，并发现/得出[主要结论]。"
         # ,"添加其他问题..."
     ]
-    chatgpt_interpretation(md_content, questions, OPENAI_API_KEY)
+    chatgpt_interpretation(md_content, questions, OPENAI_API_KEY, interpretation_output)
     logger.info("Chatmd main process finished")
 
 
