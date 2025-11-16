@@ -290,3 +290,184 @@
 2025-11-07 00:15:41,280 - DEBUG - Chunk 1 preview: 本文建立的磁场模型需要以下输入参数才能够得到磁场的值：  1. **位置坐标**（$\mathbf{r}$）：模型中磁场的计算基于空间中的特定位置，这是最直接的输入参数。  2. **偶极倾角**（$\psi$）：地球磁场的一个重要特性，影
 2025-11-07 00:15:42,289 - INFO - Interpretation answers appended to files/Modeling_of_the_Quiet_and_Storm_Time_Geosynchronous_Magnetic_Field/interpretation_results.md
 2025-11-07 00:15:42,289 - INFO - ChatPDFv1 CLI process finished
+2025-11-16 14:36:44,002 - INFO - Starting ChatPDFv1 CLI process
+2025-11-16 14:51:16,241 - INFO - Starting ChatPDFv1 CLI process
+2025-11-16 14:53:11,408 - INFO - Starting ChatPDFv1 CLI process
+2025-11-16 14:53:11,410 - INFO - Submitting MinerU extraction task for https://arxiv.org/pdf/2511.09950
+2025-11-16 14:53:58,959 - INFO - Starting ChatPDFv1 CLI process
+2025-11-16 14:53:58,962 - INFO - Submitting MinerU extraction task for https://arxiv.org/pdf/2511.09950
+2025-11-16 14:54:03,492 - INFO - MinerU task created: 149be673-827e-4441-9f06-9eb5c770567f
+2025-11-16 14:54:05,591 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:54:12,959 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:54:19,393 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:54:27,614 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:54:34,753 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:54:41,326 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:54:48,837 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:54:55,351 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:55:02,162 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:55:09,080 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:55:15,730 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:55:22,157 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:55:28,737 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:55:35,398 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:55:41,800 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:55:48,294 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:55:54,421 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:56:00,989 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:56:07,443 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:56:13,687 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:56:19,816 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:56:26,369 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:56:33,948 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:56:40,933 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:56:47,171 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:56:53,669 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:56:59,874 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:57:06,629 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:57:12,856 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:57:19,425 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:57:25,661 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:57:32,828 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:57:39,293 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:57:45,416 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:57:52,093 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:57:58,489 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:58:05,112 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:58:11,248 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:58:17,418 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:58:23,617 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:58:29,766 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:58:35,918 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:58:43,194 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:58:49,335 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:58:55,582 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:59:02,542 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:59:09,102 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:59:15,343 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:59:22,610 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:59:29,285 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:59:35,398 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:59:41,864 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:59:48,517 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 14:59:57,758 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 15:00:04,468 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 15:00:10,637 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 15:00:17,360 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 15:00:24,918 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 15:00:31,114 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 15:00:37,766 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 15:00:43,909 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 15:00:50,056 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 15:00:56,303 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 15:01:02,480 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 15:01:08,669 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 15:01:14,847 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 15:01:20,964 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 15:01:27,127 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 15:01:33,362 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 15:01:40,567 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 15:01:46,894 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 15:01:53,790 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 15:02:01,814 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 15:02:04,123 - INFO - Starting ChatPDFv1 CLI process
+2025-11-16 15:02:05,403 - DEBUG - POST https://api.deepseek.com/v1/chat/completions returned status 400
+2025-11-16 15:02:05,403 - ERROR - Error with deepseek API for chunk 1: 400
+2025-11-16 15:02:06,410 - INFO - Interpretation answers appended to files/interpretation_results.md
+2025-11-16 15:02:06,410 - INFO - ChatPDFv1 CLI process finished
+2025-11-16 15:02:07,955 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 15:02:14,127 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 15:02:20,375 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 15:02:27,008 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 15:02:33,176 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 15:02:39,322 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 15:02:45,463 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 15:02:45,539 - INFO - Starting ChatPDFv1 CLI process
+2025-11-16 15:02:45,541 - INFO - Skipping interpretation for question (already present): 请用以下模板概括该文档，并将其中的占位符填入具体信息；若文中未提及某项，请写‘未说明’；若涉及到专业词汇，请在结尾处统一进行解释：[xxxx年]，[xx大学/研究机构]的[xx作者等]针对[研究问题]，采用[研究手段/方法]，对[研究对象或范围]进行了研究，并发现/得出[主要结论]。
+2025-11-16 15:02:45,541 - INFO - No new interpretation sections to write (all questions handled).
+2025-11-16 15:02:45,541 - INFO - ChatPDFv1 CLI process finished
+2025-11-16 15:02:52,134 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 15:02:52,645 - INFO - Starting ChatPDFv1 CLI process
+2025-11-16 15:02:53,700 - DEBUG - POST https://api.deepseek.com/v1/ returned status 404
+2025-11-16 15:02:53,700 - ERROR - Error with deepseek API for chunk 1: 404
+2025-11-16 15:02:54,705 - INFO - Interpretation answers appended to files/interpretation_results.md
+2025-11-16 15:02:54,706 - INFO - ChatPDFv1 CLI process finished
+2025-11-16 15:02:58,594 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 15:03:05,128 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 15:03:11,258 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 15:03:17,501 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 15:03:23,626 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 15:03:29,785 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 15:03:37,275 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 15:03:43,407 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 15:03:49,608 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 15:03:55,744 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 15:04:01,883 - INFO - MinerU task 149be673-827e-4441-9f06-9eb5c770567f state: pending
+2025-11-16 15:04:28,535 - INFO - Starting ChatPDFv1 CLI process
+2025-11-16 15:04:55,112 - INFO - Starting ChatPDFv1 CLI process
+2025-11-16 15:04:56,461 - DEBUG - POST https://api.deepseek.com/v1/chat/completions returned status 400
+2025-11-16 15:04:56,461 - ERROR - Error with deepseek API for chunk 1: 400
+2025-11-16 15:04:57,465 - INFO - Interpretation answers appended to files/interpretation_results.md
+2025-11-16 15:04:57,465 - INFO - ChatPDFv1 CLI process finished
+2025-11-16 15:13:27,905 - INFO - Starting ChatPDFv1 CLI process
+2025-11-16 15:13:29,349 - DEBUG - POST https://api.deepseek.com/v1/chat/completions returned status 400
+2025-11-16 15:13:29,350 - ERROR - Error with deepseek API for chunk 1: 400
+2025-11-16 15:13:30,358 - INFO - Interpretation answers appended to files/interpretation_results.md
+2025-11-16 15:13:30,359 - INFO - ChatPDFv1 CLI process finished
+2025-11-16 15:13:36,920 - INFO - Starting ChatPDFv1 CLI process
+2025-11-16 15:13:36,921 - INFO - Skipping interpretation for question (already present): 请用以下模板概括该文档，并将其中的占位符填入具体信息；若文中未提及某项，请写‘未说明’；若涉及到专业词汇，请在结尾处统一进行解释：[xxxx年]，[xx大学/研究机构]的[xx作者等]针对[研究问题]，采用[研究手段/方法]，对[研究对象或范围]进行了研究，并发现/得出[主要结论]。
+2025-11-16 15:13:36,921 - INFO - No new interpretation sections to write (all questions handled).
+2025-11-16 15:13:36,921 - INFO - ChatPDFv1 CLI process finished
+2025-11-16 15:13:49,020 - INFO - Starting ChatPDFv1 CLI process
+2025-11-16 15:14:08,778 - DEBUG - POST https://api.openai.com/v1/chat/completions success (200)
+2025-11-16 15:14:08,780 - INFO - openai API用量: prompt_tokens=24254, completion_tokens=585, total_tokens=24839, 估算价格=$0.260090
+2025-11-16 15:14:08,780 - INFO - Chunk 1/1 answered for question: 请用以下模板概括该文档，并将其中的占位符填入具体信息；若文中未提及某项，请写‘未说明’；若涉及到专业词汇，请在结尾处统一进行解释：[xxxx年]，[xx大学/研究机构]的[xx作者等]针对[研究问题]，采用[研究手段/方法]，对[研究对象或范围]进行了研究，并发现/得出[主要结论]。
+2025-11-16 15:14:08,780 - DEBUG - Chunk 1 preview: 2025年，哥德堡大学的Frida Brogren, Christoffer Olofsson, Joel Magnusson, 和Arkady Gonoskov针对粒子模拟的研究问题，采用模块化粒子模拟框架（$\pi$-PIC）的研究手段
+2025-11-16 15:14:09,789 - INFO - Interpretation answers appended to files/interpretation_results.md
+2025-11-16 15:14:09,789 - INFO - ChatPDFv1 CLI process finished
+2025-11-16 15:15:15,235 - INFO - Starting ChatPDFv1 CLI process
+2025-11-16 15:15:16,294 - DEBUG - POST https://api.deepseek.com/v1/chat/completions returned status 400
+2025-11-16 15:15:16,294 - ERROR - Error with deepseek API for chunk 1: 400
+2025-11-16 15:15:17,301 - INFO - Interpretation answers appended to files/interpretation_results.md
+2025-11-16 15:15:17,301 - INFO - ChatPDFv1 CLI process finished
+2025-11-16 15:17:41,898 - INFO - Starting ChatPDFv1 CLI process
+2025-11-16 15:17:41,900 - INFO - Skipping interpretation for question (already present): 请用以下模板概括该文档，并将其中的占位符填入具体信息；若文中未提及某项，请写‘未说明’；若涉及到专业词汇，请在结尾处统一进行解释：[xxxx年]，[xx大学/研究机构]的[xx作者等]针对[研究问题]，采用[研究手段/方法]，对[研究对象或范围]进行了研究，并发现/得出[主要结论]。
+2025-11-16 15:17:41,900 - INFO - No new interpretation sections to write (all questions handled).
+2025-11-16 15:17:41,900 - INFO - ChatPDFv1 CLI process finished
+2025-11-16 15:18:14,776 - INFO - Starting ChatPDFv1 CLI process
+2025-11-16 15:18:14,779 - DEBUG - POST https://api.deepseek.com/v1/chat/completions payload preview: {'model': 'gpt-4-turbo-preview', 'messages': [{'role': 'system', 'content': '你是一个学术文献分析专家，请基于提供的文档内容回答问题，请注意对专业名词做出解释。'}, {'role': 'user', 'content': '文档片段 1/1：\n\n# $\\pi$ -PIC: a framework for modular particle-in-cell developments and simulations\n\nFrida Brogren, Christoffer Olofsson, Joel Magnusson, and Arkady Gonoskov\n\nDepartment of Physics, University of Gothenburg, SE-41296 Gothenburg, Sweden\n\nNovember 14, 2025\n\n# Abstract\n\nRecently proposed modifications of the standard particle-in-cell (PIC) method resolve long-standing limitations such as exact preservation of physically conserved quantities and unbiased ensemble down-sampling. Such advances pave the way for next-generation PIC codes capable of using lower resolution and fewer particles per cell, enabling interactive studies on personal computers and facilitating large-scale parameter scans on supercomputers. Here, we present a Python-controlled framework designed to stimulate the dissemination and adoption of novel P
+2025-11-16 15:18:15,897 - DEBUG - POST https://api.deepseek.com/v1/chat/completions returned status 400; response body preview: {"error":{"message":"Model Not Exist","type":"invalid_request_error","param":null,"code":"invalid_request_error"}}
+2025-11-16 15:18:15,898 - ERROR - Error with deepseek API for chunk 1: 400
+2025-11-16 15:18:16,902 - INFO - Interpretation answers appended to files/interpretation_results.md
+2025-11-16 15:18:16,903 - INFO - ChatPDFv1 CLI process finished
+2025-11-16 15:18:55,389 - INFO - Starting ChatPDFv1 CLI process
+2025-11-16 15:18:55,391 - DEBUG - Provider deepseek: replacing unsupported model 'gpt-4-turbo-preview' with fallback 'gpt-3.5-turbo'
+2025-11-16 15:18:55,392 - DEBUG - POST https://api.deepseek.com/v1/chat/completions payload preview: {'model': 'gpt-3.5-turbo', 'messages': [{'role': 'system', 'content': '你是一个学术文献分析专家，请基于提供的文档内容回答问题，请注意对专业名词做出解释。'}, {'role': 'user', 'content': '文档片段 1/1：\n\n# $\\pi$ -PIC: a framework for modular particle-in-cell developments and simulations\n\nFrida Brogren, Christoffer Olofsson, Joel Magnusson, and Arkady Gonoskov\n\nDepartment of Physics, University of Gothenburg, SE-41296 Gothenburg, Sweden\n\nNovember 14, 2025\n\n# Abstract\n\nRecently proposed modifications of the standard particle-in-cell (PIC) method resolve long-standing limitations such as exact preservation of physically conserved quantities and unbiased ensemble down-sampling. Such advances pave the way for next-generation PIC codes capable of using lower resolution and fewer particles per cell, enabling interactive studies on personal computers and facilitating large-scale parameter scans on supercomputers. Here, we present a Python-controlled framework designed to stimulate the dissemination and adoption of novel PIC dev
+2025-11-16 15:18:56,653 - DEBUG - POST https://api.deepseek.com/v1/chat/completions returned status 400; response body preview: {"error":{"message":"Model Not Exist","type":"invalid_request_error","param":null,"code":"invalid_request_error"}}
+2025-11-16 15:18:56,653 - ERROR - Error with deepseek API for chunk 1: 400
+2025-11-16 15:18:57,658 - INFO - Interpretation answers appended to files/interpretation_results.md
+2025-11-16 15:18:57,659 - INFO - ChatPDFv1 CLI process finished
+2025-11-16 15:25:21,753 - INFO - Starting ChatPDFv1 CLI process
+2025-11-16 15:25:21,755 - DEBUG - Provider deepseek: replacing unsupported model 'gpt-4-turbo-preview' with fallback 'gpt-3.5-turbo'
+2025-11-16 15:25:21,756 - DEBUG - POST https://api.deepseek.com/v1/chat/completions payload preview: {'model': 'gpt-3.5-turbo', 'messages': [{'role': 'system', 'content': '你是一个学术文献分析专家，请基于提供的文档内容回答问题，请注意对专业名词做出解释。'}, {'role': 'user', 'content': '文档片段 1/1：\n\n# $\\pi$ -PIC: a framework for modular particle-in-cell developments and simulations\n\nFrida Brogren, Christoffer Olofsson, Joel Magnusson, and Arkady Gonoskov\n\nDepartment of Physics, University of Gothenburg, SE-41296 Gothenburg, Sweden\n\nNovember 14, 2025\n\n# Abstract\n\nRecently proposed modifications of the standard particle-in-cell (PIC) method resolve long-standing limitations such as exact preservation of physically conserved quantities and unbiased ensemble down-sampling. Such advances pave the way for next-generation PIC codes capable of using lower resolution and fewer particles per cell, enabling interactive studies on personal computers and facilitating large-scale parameter scans on supercomputers. Here, we present a Python-controlled framework designed to stimulate the dissemination and adoption of novel PIC dev
+2025-11-16 15:25:22,801 - DEBUG - POST https://api.deepseek.com/v1/chat/completions returned status 400; response body preview: {"error":{"message":"Model Not Exist","type":"invalid_request_error","param":null,"code":"invalid_request_error"}}
+2025-11-16 15:25:22,801 - WARNING - DeepSeek model error detected: 'Model Not Exist'. Falling back to OpenAI provider for this chunk.
+2025-11-16 15:25:22,803 - DEBUG - POST https://api.openai.com/v1/chat/completions payload preview: {'model': 'gpt-3.5-turbo', 'messages': [{'role': 'system', 'content': '你是一个学术文献分析专家，请基于提供的文档内容回答问题，请注意对专业名词做出解释。'}, {'role': 'user', 'content': '文档片段 1/1：\n\n# $\\pi$ -PIC: a framework for modular particle-in-cell developments and simulations\n\nFrida Brogren, Christoffer Olofsson, Joel Magnusson, and Arkady Gonoskov\n\nDepartment of Physics, University of Gothenburg, SE-41296 Gothenburg, Sweden\n\nNovember 14, 2025\n\n# Abstract\n\nRecently proposed modifications of the standard particle-in-cell (PIC) method resolve long-standing limitations such as exact preservation of physically conserved quantities and unbiased ensemble down-sampling. Such advances pave the way for next-generation PIC codes capable of using lower resolution and fewer particles per cell, enabling interactive studies on personal computers and facilitating large-scale parameter scans on supercomputers. Here, we present a Python-controlled framework designed to stimulate the dissemination and adoption of novel PIC dev
+2025-11-16 15:25:24,307 - WARNING - openai API returned 429, attempt 1/4
+2025-11-16 15:25:25,313 - DEBUG - POST https://api.openai.com/v1/chat/completions payload preview: {'model': 'gpt-3.5-turbo', 'messages': [{'role': 'system', 'content': '你是一个学术文献分析专家，请基于提供的文档内容回答问题，请注意对专业名词做出解释。'}, {'role': 'user', 'content': '文档片段 1/1：\n\n# $\\pi$ -PIC: a framework for modular particle-in-cell developments and simulations\n\nFrida Brogren, Christoffer Olofsson, Joel Magnusson, and Arkady Gonoskov\n\nDepartment of Physics, University of Gothenburg, SE-41296 Gothenburg, Sweden\n\nNovember 14, 2025\n\n# Abstract\n\nRecently proposed modifications of the standard particle-in-cell (PIC) method resolve long-standing limitations such as exact preservation of physically conserved quantities and unbiased ensemble down-sampling. Such advances pave the way for next-generation PIC codes capable of using lower resolution and fewer particles per cell, enabling interactive studies on personal computers and facilitating large-scale parameter scans on supercomputers. Here, we present a Python-controlled framework designed to stimulate the dissemination and adoption of novel PIC dev
+2025-11-16 15:25:26,611 - WARNING - openai API returned 429, attempt 2/4
+2025-11-16 15:25:28,618 - DEBUG - POST https://api.openai.com/v1/chat/completions payload preview: {'model': 'gpt-3.5-turbo', 'messages': [{'role': 'system', 'content': '你是一个学术文献分析专家，请基于提供的文档内容回答问题，请注意对专业名词做出解释。'}, {'role': 'user', 'content': '文档片段 1/1：\n\n# $\\pi$ -PIC: a framework for modular particle-in-cell developments and simulations\n\nFrida Brogren, Christoffer Olofsson, Joel Magnusson, and Arkady Gonoskov\n\nDepartment of Physics, University of Gothenburg, SE-41296 Gothenburg, Sweden\n\nNovember 14, 2025\n\n# Abstract\n\nRecently proposed modifications of the standard particle-in-cell (PIC) method resolve long-standing limitations such as exact preservation of physically conserved quantities and unbiased ensemble down-sampling. Such advances pave the way for next-generation PIC codes capable of using lower resolution and fewer particles per cell, enabling interactive studies on personal computers and facilitating large-scale parameter scans on supercomputers. Here, we present a Python-controlled framework designed to stimulate the dissemination and adoption of novel PIC dev
+2025-11-16 15:25:29,589 - WARNING - openai API returned 429, attempt 3/4
+2025-11-16 15:25:33,596 - DEBUG - POST https://api.openai.com/v1/chat/completions payload preview: {'model': 'gpt-3.5-turbo', 'messages': [{'role': 'system', 'content': '你是一个学术文献分析专家，请基于提供的文档内容回答问题，请注意对专业名词做出解释。'}, {'role': 'user', 'content': '文档片段 1/1：\n\n# $\\pi$ -PIC: a framework for modular particle-in-cell developments and simulations\n\nFrida Brogren, Christoffer Olofsson, Joel Magnusson, and Arkady Gonoskov\n\nDepartment of Physics, University of Gothenburg, SE-41296 Gothenburg, Sweden\n\nNovember 14, 2025\n\n# Abstract\n\nRecently proposed modifications of the standard particle-in-cell (PIC) method resolve long-standing limitations such as exact preservation of physically conserved quantities and unbiased ensemble down-sampling. Such advances pave the way for next-generation PIC codes capable of using lower resolution and fewer particles per cell, enabling interactive studies on personal computers and facilitating large-scale parameter scans on supercomputers. Here, we present a Python-controlled framework designed to stimulate the dissemination and adoption of novel PIC dev
+2025-11-16 15:25:34,655 - DEBUG - POST https://api.openai.com/v1/chat/completions returned status 429; response body preview: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2025-11-16 15:25:34,657 - ERROR - Error with deepseek API for chunk 1: 429
+2025-11-16 15:25:35,664 - INFO - Interpretation answers appended to files/interpretation_results.md
+2025-11-16 15:25:35,664 - INFO - ChatPDFv1 CLI process finished

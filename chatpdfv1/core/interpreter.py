@@ -8,7 +8,7 @@ from typing import Dict, Iterable, Optional, Sequence
 from ..services.openai_client import post_with_retries
 from ..utils import load_existing_answers, split_into_chunks
 
-logger = logging.getLogger("chatmd")
+logger = logging.getLogger("chatpdf")
 
 OPENAI_CHAT_COMPLETIONS_URL = "https://api.openai.com/v1/chat/completions"
 

@@ -4,7 +4,7 @@ import logging
 from pathlib import Path
 from typing import Dict, Optional
 
-logger = logging.getLogger("chatmd")
+logger = logging.getLogger("chatpdf")
 
 
 def read_md_content(file_path: str | Path) -> Optional[Dict[str, str]]:

@@ -16,15 +16,6 @@ QUESTIONS = [
         "请用以下模板概括该文档，并将其中的占位符填入具体信息；若文中未提及某项，请写‘未说明’；"
         "若涉及到专业词汇，请在结尾处统一进行解释：[xxxx年]，[xx大学/研究机构]的[xx作者等]"
         "针对[研究问题]，采用[研究手段/方法]，对[研究对象或范围]进行了研究，并发现/得出[主要结论]。"
-    ),
-    (
-        "本文中建立的GEO磁场模型中，磁场在GEO轨道高度的大概取值范围是多少？请用nT为单位。已知地磁偶极场在GEO轨道高度的磁场强度约为100-300 nT，本文的模型结果与此相比有多大不同？"
-    ),
-    (
-        "本文所建立的磁场模型中，磁场的空间不均匀性如何？比如在GEO高度，百公里范围内是否会有显著变化？磁场随时间的变化情况如何？在秒量级或分钟量级是否会有变化？本文的模型是否会有时效性？比如需要定期更新模型参数？"
-    ),
-    (
-        "本文的磁场模型除了位置坐标外，还需要哪些输入参数，才能够得到磁场的值？这些输入参数应该如何得到？直接在空间进行测量吗？"
     )
 ]
 
@@ -52,7 +43,7 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
 
 def main(argv: Optional[Sequence[str]] = None) -> int:
     configure_logging()
-    logger = logging.getLogger("chatmd")
+    logger = logging.getLogger("chatpdf")
     logger.info("Starting ChatPDFv1 CLI process")
 
     args = parse_args(argv)

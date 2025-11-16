@@ -3,8 +3,8 @@ from __future__ import annotations
 import logging
 from pathlib import Path
 
-DEFAULT_LOG_NAME = "chatmd"
-DEFAULT_LOG_FILENAME = "chatmd.log"
+DEFAULT_LOG_NAME = "chatpdf"
+DEFAULT_LOG_FILENAME = "chatpdf.log"
 
 
 def configure_logging(

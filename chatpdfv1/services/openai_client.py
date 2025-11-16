@@ -6,7 +6,7 @@ from typing import Any, Dict, Optional
 
 import requests
 
-logger = logging.getLogger("chatmd")
+logger = logging.getLogger("chatpdf")
 
 PRICE_INPUT_PER_1K = 0.01
 PRICE_OUTPUT_PER_1K = 0.03

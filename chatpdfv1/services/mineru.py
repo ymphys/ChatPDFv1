@@ -12,7 +12,7 @@ from urllib.parse import unquote, urlparse
 
 import requests
 
-logger = logging.getLogger("chatmd")
+logger = logging.getLogger("chatpdf")
 
 BASE_URL = "https://mineru.net/api/v4"
 
